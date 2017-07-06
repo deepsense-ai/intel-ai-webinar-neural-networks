@@ -11,6 +11,12 @@ from keras.layers import Conv2D, MaxPool2D, Dropout, BatchNormalization, GlobalM
 resolution = 28
 classes = 10
 
+ALL_MODELS = ['log_reg', 'mlp', 'conv1','conv1_maxpool','conv2_maxpool',
+              'conv2_maxpool_large','conv2x2_maxpool','conv2x2_maxpool_dropout',
+              'conv2x2_maxpool_dropout_batchnorm',      
+              'conv2x2_maxpool_dropout_batchnorm_dense',
+              'conv2x2_maxpool_dropout_batchnorm_fully_convo']
+
 def build_models_dict():
     models = {'log_reg':log_reg(),
           'mlp':mlp(),
@@ -252,10 +258,11 @@ def train_models_and_format_grid(X_train, Y_train, X_test, Y_test, plot_losses, 
     df['loss_overfit'] = df['loss_test'] - df['loss_train']
     return df
 
-def plot_grid(save='../resources/cached_model_grid_scores.csv'):
-    grid = pd.read_csv(save)   
+def plot_grid(models = ALL_MODELS, save_path='../resources/cached_model_grid_scores.csv'):
+    grid = pd.read_csv(save_path)   
     grid = pd.melt(grid, id_vars=['model_names','time_to_train','params'])
-
+    grid = grid[grid['model_names'].isin(models)]
+    
     def split_variable(x):
         s, d = x.split('_')
         return pd.Series({'data_fold':s, 'score': d})
@@ -288,14 +295,11 @@ def plot_grid(save='../resources/cached_model_grid_scores.csv'):
     ax4.legend_.remove();
     plt.show();
     
-def plot_complexity(models=None, save='../resources/cached_model_grid_scores.csv'):
-    if save:
-        grid = pd.read_csv(save)
-    else:
-        grid = score_model_grid(models)
-        grid.to_csv(save, index=None)
-        
+def plot_complexity(models=ALL_MODELS, save_path='../resources/cached_model_grid_scores.csv'):
+    grid = pd.read_csv(save_path)    
     grid = pd.melt(grid, id_vars=['model_names','time_to_train','params'])
+    grid = grid[grid['model_names'].isin(models)]
+    
     def split_variable(x):
         s, d = x.split('_')
         return pd.Series({'data_fold':s, 'score': d})
