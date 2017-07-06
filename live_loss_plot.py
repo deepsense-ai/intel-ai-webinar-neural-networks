@@ -24,7 +24,6 @@ class PlotLosses(Callback):
         self.logs = []
 
     def on_epoch_end(self, epoch, logs={}):
-
         self.logs.append(logs)
 
         clear_output(wait=True)
@@ -38,7 +37,7 @@ class PlotLosses(Callback):
                      label="training")
             if self.params['do_validation']:
                 plt.plot(range(1, len(self.logs) + 1),
-                         [logs['val_' + metric] for log in self.logs],
+                         [log['val_' + metric] for log in self.logs],
                          label="validation")
             plt.title(translate_metric(metric))
             plt.xlabel('epoch')
