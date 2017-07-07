@@ -1,0 +1,67 @@
+model_names,time_to_train,params,variable,value,score,data_fold
+logistic regression,13.0619418621,7850,acc_test,0.89132176235,acc,test
+multi layer perceptron,17.6642899513,50890,acc_test,0.908945260347,acc,test
+1 conv layer 16 filters 3x3,51.8300180435,108330,acc_test,0.912950600801,acc,test
+1 conv layer 16 filters 3x3 with maxpool,47.1447889805,27210,acc_test,0.922830440587,acc,test
+2 conv layer 16 and 32 filters 3x3 with maxpool,71.3030018806,12810,acc_test,0.913217623498,acc,test
+2 conv layer 64 filters 3x3 with maxpool,161.79598093,53578,acc_test,0.921228304406,acc,test
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool,150.357177019,21498,acc_test,0.930040053405,acc,test
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool and dropout,195.047509909,21690,acc_test,0.938317757009,acc,test
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool with dropout with batch normalization,196.616779089,21690,acc_test,0.936982643525,acc,test
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, dense layer with dropout with batch normalization",198.968840122,83514,acc_test,0.937783711615,acc,test
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, global average pooling layer with dropout with batch normalization",199.957845926,44666,acc_test,0.928170894526,acc,test
+logistic regression,13.0619418621,7850,acc_train,0.915548434479,acc,train
+multi layer perceptron,17.6642899513,50890,acc_train,0.958942519527,acc,train
+1 conv layer 16 filters 3x3,51.8300180435,108330,acc_train,0.995059750317,acc,train
+1 conv layer 16 filters 3x3 with maxpool,47.1447889805,27210,acc_train,0.963014887509,acc,train
+2 conv layer 16 and 32 filters 3x3 with maxpool,71.3030018806,12810,acc_train,0.944455571137,acc,train
+2 conv layer 64 filters 3x3 with maxpool,161.79598093,53578,acc_train,0.969557380332,acc,train
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool,150.357177019,21498,acc_train,0.968489218239,acc,train
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool and dropout,195.047509909,21690,acc_train,0.960144201883,acc,train
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool with dropout with batch normalization,196.616779089,21690,acc_train,0.960544762668,acc,train
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, dense layer with dropout with batch normalization",198.968840122,83514,acc_train,0.948728219511,acc,train
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, global average pooling layer with dropout with batch normalization",199.957845926,44666,acc_train,0.940717003809,acc,train
+logistic regression,13.0619418621,7850,loss_test,0.42087232561,loss,test
+multi layer perceptron,17.6642899513,50890,loss_test,0.329812224185,loss,test
+1 conv layer 16 filters 3x3,51.8300180435,108330,loss_test,0.356635776349,loss,test
+1 conv layer 16 filters 3x3 with maxpool,47.1447889805,27210,loss_test,0.294033101669,loss,test
+2 conv layer 16 and 32 filters 3x3 with maxpool,71.3030018806,12810,loss_test,0.296131464753,loss,test
+2 conv layer 64 filters 3x3 with maxpool,161.79598093,53578,loss_test,0.296513665304,loss,test
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool,150.357177019,21498,loss_test,0.262339437505,loss,test
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool and dropout,195.047509909,21690,loss_test,0.210337839642,loss,test
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool with dropout with batch normalization,196.616779089,21690,loss_test,0.210031560162,loss,test
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, dense layer with dropout with batch normalization",198.968840122,83514,loss_test,0.205332345931,loss,test
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, global average pooling layer with dropout with batch normalization",199.957845926,44666,loss_test,0.238688469084,loss,test
+logistic regression,13.0619418621,7850,loss_train,0.327760340825,loss,train
+multi layer perceptron,17.6642899513,50890,loss_train,0.150011218639,loss,train
+1 conv layer 16 filters 3x3,51.8300180435,108330,loss_train,0.0308421853605,loss,train
+1 conv layer 16 filters 3x3 with maxpool,47.1447889805,27210,loss_train,0.135910408294,loss,train
+2 conv layer 16 and 32 filters 3x3 with maxpool,71.3030018806,12810,loss_train,0.186740450787,loss,train
+2 conv layer 64 filters 3x3 with maxpool,161.79598093,53578,loss_train,0.103262417795,loss,train
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool,150.357177019,21498,loss_train,0.105550446929,loss,train
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool and dropout,195.047509909,21690,loss_train,0.131144948906,loss,train
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool with dropout with batch normalization,196.616779089,21690,loss_train,0.128378435966,loss,train
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, dense layer with dropout with batch normalization",198.968840122,83514,loss_train,0.159451132279,loss,train
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, global average pooling layer with dropout with batch normalization",199.957845926,44666,loss_train,0.190695375835,loss,train
+logistic regression,13.0619418621,7850,acc_overfit,0.0242266721291,acc,overfit
+multi layer perceptron,17.6642899513,50890,acc_overfit,0.0499972591802,acc,overfit
+1 conv layer 16 filters 3x3,51.8300180435,108330,acc_overfit,0.082109149516,acc,overfit
+1 conv layer 16 filters 3x3 with maxpool,47.1447889805,27210,acc_overfit,0.0401844469217,acc,overfit
+2 conv layer 16 and 32 filters 3x3 with maxpool,71.3030018806,12810,acc_overfit,0.0312379476389,acc,overfit
+2 conv layer 64 filters 3x3 with maxpool,161.79598093,53578,acc_overfit,0.0483290759266,acc,overfit
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool,150.357177019,21498,acc_overfit,0.0384491648343,acc,overfit
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool and dropout,195.047509909,21690,acc_overfit,0.0218264448733,acc,overfit
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool with dropout with batch normalization,196.616779089,21690,acc_overfit,0.023562119143,acc,overfit
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, dense layer with dropout with batch normalization",198.968840122,83514,acc_overfit,0.0109445078958,acc,overfit
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, global average pooling layer with dropout with batch normalization",199.957845926,44666,acc_overfit,0.0125461092833,acc,overfit
+logistic regression,13.0619418621,7850,loss_overfit,0.0931119847857,loss,overfit
+multi layer perceptron,17.6642899513,50890,loss_overfit,0.179801005546,loss,overfit
+1 conv layer 16 filters 3x3,51.8300180435,108330,loss_overfit,0.325793590988,loss,overfit
+1 conv layer 16 filters 3x3 with maxpool,47.1447889805,27210,loss_overfit,0.158122693375,loss,overfit
+2 conv layer 16 and 32 filters 3x3 with maxpool,71.3030018806,12810,loss_overfit,0.109391013966,loss,overfit
+2 conv layer 64 filters 3x3 with maxpool,161.79598093,53578,loss_overfit,0.193251247509,loss,overfit
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool,150.357177019,21498,loss_overfit,0.156788990576,loss,overfit
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool and dropout,195.047509909,21690,loss_overfit,0.0791928907359,loss,overfit
+2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool with dropout with batch normalization,196.616779089,21690,loss_overfit,0.081653124196,loss,overfit
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, dense layer with dropout with batch normalization",198.968840122,83514,loss_overfit,0.0458812136519,loss,overfit
+"2 blocks of 2 conv layer 16 and 32 filters 3x3 with maxpool, global average pooling layer with dropout with batch normalization",199.957845926,44666,loss_overfit,0.047993093249,loss,overfit
