@@ -34,7 +34,7 @@ def plot_loss_grid(models = ALL_MODELS, save_path='../resources/cached_model_gri
     sns.swarmplot(data=grid_loss, 
                         y='variable', x='value', hue='model_names', ax=ax1);
     ax1.set(xlabel='losses', ylabel='');
-    ax1.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.);
+    ax1.legend(bbox_to_anchor=(1.05, 1), loc='lower right', borderaxespad=0.);
     grid_overfit= grid[(grid['score'] == 'loss')
                        & (grid['data_fold'] == 'overfit')]
     sns.swarmplot(data=grid_overfit, 
@@ -53,7 +53,7 @@ def plot_acc_grid(models = ALL_MODELS, save_path='../resources/cached_model_grid
     sns.swarmplot(data=grid_acc, 
                   y='variable', x='value', hue='model_names', ax=ax1);
     ax1.set(xlabel='scores', ylabel='');
-    ax1.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.);
+    ax1.legend(bbox_to_anchor=(1.05, 1), loc='lower right', borderaxespad=0.);
     grid_overfit= grid[(grid['score'] == 'acc')
                        & (grid['data_fold'] == 'overfit')]
     sns.swarmplot(data=grid_overfit, 
@@ -68,7 +68,8 @@ def plot_complexity(models=ALL_MODELS, save_path='../resources/cached_model_grid
 
     plt.figure(figsize=(12,12));
     sns.lmplot(data=grid, x='time_to_train', y='params', 
-               hue='model_names',fit_reg=False);
+               hue='model_names', fit_reg=False, legend=False);
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='lower right', borderaxespad=0.);
     plt.show();
     
 def score_model_grid(models, names, train_times, X_train, Y_train, X_test, Y_test):
